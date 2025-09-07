@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AI Talent Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">
+                        <i class="fas fa-{{ 'check-circle' if category == 'success' else 'exclamation-circle' }}"></i>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-brain"></i>
+            <span>AI Talent Manager</span>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/dashboard" class="active">Dashboard</a>
+            <a href="/prototype">Prototype</a>
+            {% if user %}
+                <span class="user-welcome">Welcome, {{ user.name }}!</span>
+                <a href="/logout" class="nav-btn logout">Logout</a>
+            {% else %}
+                <a href="/login" class="nav-btn">Login</a>
+                <a href="/signup" class="nav-btn signup">Sign Up</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Dashboard</h1>
+                <p>Comprehensive overview of your talent management system</p>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="employee-count">0</h3>
+                        <p>Total Employees</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="project-count">0</h3>
+                        <p>Active Projects</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="match-rate">0%</h3>
+                        <p>Match Accuracy</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="avg-time">0s</h3>
+                        <p>Avg. Processing Time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="content-section">
+                    <h2>Key Features</h2>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-robot"></i>
+                            <h3>AI-Powered Matching</h3>
+                            <p>Advanced machine learning algorithms analyze skills, proficiency, availability, and project requirements to find the perfect match.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <h3>Real-time Analytics</h3>
+                            <p>Comprehensive dashboards with interactive charts, heatmaps, and performance metrics for data-driven decisions.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-comments"></i>
+                            <h3>Conversational Interface</h3>
+                            <p>Natural language processing allows you to query and adjust allocations using simple commands.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Conflict Resolution</h3>
+                            <p>Automatic detection and resolution of resource conflicts with priority-based allocation strategies.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-eye"></i>
+                            <h3>Transparency & Audit</h3>
+                            <p>Complete audit trail and explainable AI decisions for every resource allocation.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <h3>Dynamic Adaptation</h3>
+                            <p>Real-time re-planning when projects change, scope shifts, or new requirements arise.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>How It Works</h2>
+                    <div class="workflow">
+                        <div class="workflow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Data Ingestion</h3>
+                                <p>Upload employee and project data from various sources (CSV, Excel, PDF)</p>
+                                <ul>
+                                    <li>Employee skills and proficiency levels</li>
+                                    <li>Project requirements and constraints</li>
+                                    <li>Availability and capacity information</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>AI Analysis</h3>
+                                <p>Machine learning algorithms process and analyze the data</p>
+                                <ul>
+                                    <li>Skill matching using TF-IDF and cosine similarity</li>
+                                    <li>Proficiency level assessment</li>
+                                    <li>Availability and capacity optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Smart Allocation</h3>
+                                <p>Generate optimal resource allocations with detailed explanations</p>
+                                <ul>
+                                    <li>Multi-criteria optimization</li>
+                                    <li>Conflict detection and resolution</li>
+                                    <li>Priority-based assignment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Visualization & Control</h3>
+                                <p>Interactive dashboards for monitoring and adjustment</p>
+                                <ul>
+                                    <li>Gantt charts and timeline views</li>
+                                    <li>Resource utilization heatmaps</li>
+                                    <li>Real-time conflict monitoring</p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Future Roadmap</h2>
+                    <div class="roadmap">
+                        <div class="roadmap-item">
+                            <div class="roadmap-phase">Phase 1</div>
+                            <h3>Core Platform</h3>
+                            <p>Basic matching and visualization capabilities</p>
+                            <ul>
+                                <li>✓ Employee-project matching</li>
+                                <li>✓ Basic analytics dashboard</li>
+                                <li>✓ CSV data import</li>
+                            </ul>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-phase">Phase 2</div>
+                            <h3>Advanced Features</h3>
+                            <p>Enhanced AI capabilities and integrations</p>
+                            <ul>
+                                <li>• Conversational AI interface</li>
+                                <li>• Advanced conflict resolution</li>
+                                <li>• Cost optimization</li>
+                            </ul>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-phase">Phase 3</div>
+                            <h3>Enterprise Features</h3>
+                            <p>Scalable enterprise-grade features</p>
+                            <ul>
+                                <li>• Multi-tenant architecture</li>
+                                <li>• API integrations</li>
+                                <li>• Advanced reporting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Upload your data and experience the power of AI-driven talent management</p>
+                    <a href="/prototype" class="cta-button">
+                        <i class="fas fa-rocket"></i>
+                        Launch Prototype
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-robot"></i>
+            <span>AI Assistant</span>
+        </div>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4><i class="fas fa-robot"></i> AI Support Assistant</h4>
+                <button onclick="toggleChatbot()" class="chatbot-close">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="chatbot-message bot">
+                    <i class="fas fa-robot"></i>
+                    <div class="message-content">
+                        <p>Hello! I'm your AI assistant. How can I help you with the dashboard?</p>
+                        <div class="quick-actions">
+                            <button onclick="sendQuickMessage('How to upload data?')">Upload Data</button>
+                            <button onclick="sendQuickMessage('How to perform matching?')">Run Matching</button>
+                            <button onclick="sendQuickMessage('View results help')">View Results</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Ask me anything..." onkeypress="handleChatbotKeypress(event)">
+                <button onclick="sendChatbotMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+</body>
+</html>

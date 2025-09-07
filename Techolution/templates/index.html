@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Talent Manager - Smarter Project-Resource Mapping</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">
+                        <i class="fas fa-{{ 'check-circle' if category == 'success' else 'exclamation-circle' }}"></i>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <span>AI Talent Manager</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#resources">Resources</a>
+                {% if user %}
+                    <a href="/dashboard" class="nav-btn dashboard-btn">Dashboard</a>
+                    <a href="/logout" class="nav-btn logout">Logout</a>
+                {% else %}
+                    <a href="/test-login" class="nav-btn dashboard-btn">Sign In (Test)</a>
+                    <a href="/test-signup" class="nav-btn primary-cta">Sign Up (Test)</a>
+                    <a href="/clear-session" class="nav-btn" style="background: orange; color: white;">Clear Session</a>
+                {% endif %}
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="container">
+            
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-subtitle">
+                        Match the right talent to the right project every time. Harness AI to optimize resource allocation, prevent conflicts, and accelerate success.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="/signup" class="cta-button primary">
+                            <i class="fas fa-rocket"></i>
+                            Get Started Free
+                        </a>
+                        <a href="#demo" class="cta-button secondary">
+                            <i class="fas fa-play"></i>
+                            Book a Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="ai-illustration">
+                        <div class="team-visualization">
+                            <div class="project-card-visual">
+                                <div class="project-icon">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <h4>Project Alpha</h4>
+                                <div class="team-members">
+                                    <div class="member-avatar" style="background: linear-gradient(45deg, #667eea, #764ba2);">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="member-avatar" style="background: linear-gradient(45deg, #f093fb, #f5576c);">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="member-avatar" style="background: linear-gradient(45deg, #4facfe, #00f2fe);">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ai-connection">
+                                <div class="connection-line"></div>
+                                <div class="ai-brain">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                            </div>
+                            <div class="talent-pool">
+                                <div class="talent-card">
+                                    <div class="talent-avatar">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <span>Sarah Chen</span>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">React</span>
+                                        <span class="skill-tag">Node.js</span>
+                                    </div>
+                                </div>
+                                <div class="talent-card">
+                                    <div class="talent-avatar">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <span>Mike Johnson</span>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Python</span>
+                                        <span class="skill-tag">ML</span>
+                                    </div>
+                                </div>
+                                <div class="talent-card">
+                                    <div class="talent-avatar">
+                                        <i class="fas fa-user-cog"></i>
+                                    </div>
+                                    <span>Alex Rivera</span>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">DevOps</span>
+                                        <span class="skill-tag">AWS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>Powerful Features for Modern Teams</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h3>Smart Matching</h3>
+                    <p>AI-driven resource allocation that considers skills, availability, and project requirements to find the perfect match every time.</p>
+                    <div class="feature-highlight">
+                        <span class="highlight-text">95% Match Accuracy</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Automation</h3>
+                    <p>Automated conflict detection & resolution that prevents scheduling conflicts and optimizes team productivity without manual intervention.</p>
+                    <div class="feature-highlight">
+                        <span class="highlight-text">60% Time Saved</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Insights & Transparency</h3>
+                    <p>Real-time analytics for better decision-making with complete visibility into resource allocation and project performance.</p>
+                    <div class="feature-highlight">
+                        <span class="highlight-text">100% Transparency</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="metrics-section">
+        <div class="container">
+            <h2>Trusted by Teams for Proven Results</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="metric-number">95%</div>
+                    <div class="metric-label">Match Accuracy</div>
+                    <div class="metric-description">Precision in talent-project alignment</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="metric-number">60%</div>
+                    <div class="metric-label">Time Saved</div>
+                    <div class="metric-description">Reduction in manual allocation time</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="metric-number">100%</div>
+                    <div class="metric-label">Transparency</div>
+                    <div class="metric-description">Complete visibility into decisions</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Upload Data</h3>
+                        <p>Upload your employee and project datasets in CSV format</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI Analysis</h3>
+                        <p>Our AI analyzes skills, availability, and project requirements</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Smart Matching</h3>
+                        <p>Get optimal resource allocations with detailed explanations</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Visualize & Optimize</h3>
+                        <p>View results in interactive dashboards and make adjustments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to supercharge your team's productivity?</h2>
+                <p>Join thousands of teams already using AI Talent Manager to optimize their resource allocation.</p>
+                <a href="/signup" class="cta-button primary large">
+                    <i class="fas fa-rocket"></i>
+                    Get Started Free Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <div class="logo-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI Talent Manager</h3>
+                    </div>
+                    <p>Revolutionizing project resource allocation with artificial intelligence.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#docs">Documentation</a></li>
+                        <li><a href="#api">API</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#status">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> info@aitalentmanager.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Talent Manager. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Support Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-robot"></i>
+            <span>AI Assistant</span>
+        </div>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4><i class="fas fa-robot"></i> AI Support Assistant</h4>
+                <button onclick="toggleChatbot()" class="chatbot-close">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="chatbot-message bot">
+                    <i class="fas fa-robot"></i>
+                    <div class="message-content">
+                        <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                        <div class="quick-actions">
+                            <button onclick="sendQuickMessage('How do I get started?')">Get Started Guide</button>
+                            <button onclick="sendQuickMessage('How does the matching work?')">Matching Process</button>
+                            <button onclick="sendQuickMessage('Upload data help')">Upload Help</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Ask me anything..." onkeypress="handleChatbotKeypress(event)">
+                <button onclick="sendChatbotMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+</body>
+</html>

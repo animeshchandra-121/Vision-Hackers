@@ -1,0 +1,101 @@
+Emp ID,Name,Skills,Role,Capacity per week (hrs),Previous Project Description,Proficiency,Available Date,Location
+1001,Akash Verma,Backend Developer,Intern,10.0,Microservices-based E-commerce Backend,Intermediate,2025-10-16,India
+1002,Manish Iyer,Project Manager,Full Time,20.0,KPI Monitoring Dashboard,Intermediate,2025-10-17,India
+1003,Isha Verma,Python Developer,Full Time,40.0,Student Record Management System,Senior,2025-10-18,India
+1004,Sneha Mehta,Python Developer,Senior,20.0,AI-powered Resume Parser,Intermediate,2025-10-19,India
+1005,Neha Iyer,Backend Developer,Senior,40.0,Real-time Order Processing System,Beginner,2025-10-20,India
+1006,Nikhil Mehta,AI,Full Time,10.0,Image Classification with Deep Learning,Senior,2025-10-21,India
+1007,Anjali Das,AI,Full Time,30.0,Sentiment Analysis on Social Media,Senior,2025-10-22,India
+1008,Riya Nair,Backend Developer,Senior,10.0,Scalable REST API Development,Beginner,2025-10-23,India
+1009,Amit Iyer,FSD,Intern,40.0,Blogging Platform with Analytics,Beginner,2025-10-24,India
+1010,Simran Iyer,AI,Senior,10.0,AI-driven Stock Price Prediction,Beginner,2025-10-25,India
+1011,Isha Sharma,Backend Developer,Intern,40.0,Inventory Management Backend,Senior,2025-10-26,India
+1012,Simran Singh,UI/UX,Senior,40.0,Travel Planner Web UI,Beginner,2025-10-27,India
+1013,Pooja Patel,AI,Senior,10.0,Image Classification with Deep Learning,Intermediate,2025-10-28,India
+1014,Akash Nair,AI,Full Time,10.0,Sentiment Analysis on Social Media,Beginner,2025-10-29,India
+1015,Neha Sharma,Python Developer,Intern,40.0,Student Record Management System,Senior,2025-10-30,India
+1016,Isha Das,FSD,Intern,30.0,Online Food Delivery Application,Senior,2025-10-31,India
+1017,Isha Singh,UI/UX,Intern,10.0,Healthcare App UX Research,Beginner,2025-11-01,India
+1018,Vikas Das,UI/UX,Full Time,30.0,Mobile Banking App UI Design,Intermediate,2025-11-02,India
+1019,Pooja Nair,UI/UX,Full Time,40.0,E-learning Platform Wireframes,Intermediate,2025-11-03,India
+1020,Rohit Das,Backend Developer,Intern,30.0,Payment Gateway Integration System,Intermediate,2025-11-04,India
+1021,Arjun Singh,UI/UX,Senior,20.0,Travel Planner Web UI,Beginner,2025-11-05,India
+1022,Vikas Patel,Python Developer,Intern,40.0,Web Scraping and Analytics Platform,Beginner,2025-11-06,India
+1023,Karan Nair,Backend Developer,Full Time,10.0,Payment Gateway Integration System,Senior,2025-11-07,India
+1024,Simran Das,AI,Full Time,40.0,Image Classification with Deep Learning,Intermediate,2025-11-08,India
+1025,Manish Singh,Backend Developer,Senior,30.0,Payment Gateway Integration System,Intermediate,2025-11-09,India
+1026,Manish Singh,Project Manager,Senior,20.0,KPI Monitoring Dashboard,Senior,2025-11-10,India
+1027,Nikhil Iyer,FSD,Intern,20.0,Real-time Chat Application,Intermediate,2025-11-11,India
+1028,Suresh Singh,UI/UX,Intern,30.0,Healthcare App UX Research,Senior,2025-11-12,India
+1029,Arjun Sharma,Backend Developer,Full Time,40.0,Real-time Order Processing System,Senior,2025-11-13,India
+1030,Manish Singh,Python Developer,Intern,30.0,Python-based File Management System,Intermediate,2025-11-14,India
+1031,Vikas Mehta,UI/UX,Senior,10.0,Healthcare App UX Research,Senior,2025-11-15,India
+1032,Neha Iyer,UI/UX,Intern,10.0,Healthcare App UX Research,Beginner,2025-11-16,India
+1033,Amit Das,UI/UX,Intern,10.0,Responsive Portfolio Website,Intermediate,2025-11-17,India
+1034,Rahul Mehta,AI,Intern,40.0,Fraud Detection using Machine Learning,Beginner,2025-11-18,India
+1035,Riya Mehta,AI,Full Time,30.0,Fraud Detection using Machine Learning,Beginner,2025-11-19,India
+1036,Pooja Verma,Backend Developer,Full Time,30.0,Scalable REST API Development,Beginner,2025-11-20,India
+1037,Akash Patel,AI,Senior,30.0,Speech Recognition System,Intermediate,2025-11-21,India
+1038,Pooja Verma,Backend Developer,Intern,20.0,Microservices-based E-commerce Backend,Senior,2025-11-22,India
+1039,Manish Sharma,AI,Intern,10.0,Sentiment Analysis on Social Media,Senior,2025-11-23,India
+1040,Karan Patel,AI,Senior,10.0,AI-driven Stock Price Prediction,Intermediate,2025-11-24,India
+1041,Pooja Iyer,FSD,Full Time,20.0,Real-time Chat Application,Senior,2025-11-25,India
+1042,Sneha Iyer,Backend Developer,Senior,20.0,Payment Gateway Integration System,Beginner,2025-11-26,India
+1043,Pooja Patel,FSD,Full Time,20.0,Blogging Platform with Analytics,Senior,2025-11-27,India
+1044,Pooja Das,Python Developer,Full Time,30.0,Web Scraping and Analytics Platform,Intermediate,2025-11-28,India
+1045,Priya Mehta,Python Developer,Intern,40.0,Student Record Management System,Senior,2025-11-29,India
+1046,Neha Das,Backend Developer,Full Time,20.0,Scalable REST API Development,Intermediate,2025-11-30,India
+1047,Neha Nair,Project Manager,Intern,40.0,Agile Sprint Management Tool,Beginner,2025-12-01,India
+1048,Priya Das,FSD,Senior,10.0,Blogging Platform with Analytics,Beginner,2025-12-02,India
+1049,Arjun Patel,Backend Developer,Senior,20.0,Scalable REST API Development,Senior,2025-12-03,India
+1050,Isha Iyer,Backend Developer,Senior,20.0,Inventory Management Backend,Senior,2025-12-04,India
+1051,Karan Das,UI/UX,Full Time,30.0,Healthcare App UX Research,Senior,2025-12-05,India
+1052,Anjali Singh,FSD,Full Time,20.0,Hotel Booking Platform,Intermediate,2025-12-06,India
+1053,Meena Iyer,Backend Developer,Full Time,30.0,Real-time Order Processing System,Intermediate,2025-12-07,India
+1054,Vikas Nair,UI/UX,Senior,20.0,E-learning Platform Wireframes,Senior,2025-12-08,India
+1055,Rohit Singh,FSD,Full Time,10.0,Online Food Delivery Application,Beginner,2025-12-09,India
+1056,Suresh Das,AI,Full Time,30.0,AI-driven Stock Price Prediction,Senior,2025-12-10,India
+1057,Simran Nair,Python Developer,Intern,30.0,Automated Data Processing Pipeline,Intermediate,2025-12-11,India
+1058,Isha Sharma,Python Developer,Full Time,40.0,Student Record Management System,Beginner,2025-12-12,India
+1059,Amit Verma,Python Developer,Intern,40.0,Student Record Management System,Beginner,2025-12-13,India
+1060,Riya Das,FSD,Senior,30.0,Hotel Booking Platform,Beginner,2025-12-14,India
+1061,Rahul Das,AI,Intern,10.0,Image Classification with Deep Learning,Intermediate,2025-12-15,India
+1062,Suresh Mehta,UI/UX,Senior,20.0,Responsive Portfolio Website,Intermediate,2025-12-16,India
+1063,Akash Patel,Python Developer,Intern,30.0,Python-based File Management System,Senior,2025-12-17,India
+1064,Riya Mehta,Backend Developer,Full Time,20.0,Payment Gateway Integration System,Intermediate,2025-12-18,India
+1065,Suresh Sharma,AI,Full Time,40.0,Image Classification with Deep Learning,Intermediate,2025-12-19,India
+1066,Divya Verma,AI,Intern,10.0,Speech Recognition System,Senior,2025-12-20,India
+1067,Amit Sharma,Python Developer,Senior,40.0,Python-based File Management System,Beginner,2025-12-21,India
+1068,Anjali Singh,UI/UX,Senior,40.0,Mobile Banking App UI Design,Senior,2025-12-22,India
+1069,Pooja Iyer,FSD,Full Time,30.0,Online Food Delivery Application,Intermediate,2025-12-23,India
+1070,Karan Nair,FSD,Senior,40.0,Real-time Chat Application,Intermediate,2025-12-24,India
+1071,Sneha Patel,Python Developer,Full Time,30.0,Web Scraping and Analytics Platform,Senior,2025-12-25,India
+1072,Divya Verma,Backend Developer,Senior,20.0,Real-time Order Processing System,Intermediate,2025-12-26,India
+1073,Pooja Nair,UI/UX,Senior,30.0,E-learning Platform Wireframes,Beginner,2025-12-27,India
+1074,Pooja Sharma,Backend Developer,Full Time,40.0,Real-time Order Processing System,Beginner,2025-12-28,India
+1075,Karan Nair,AI,Intern,10.0,Image Classification with Deep Learning,Senior,2025-12-29,India
+1076,Meena Patel,Backend Developer,Full Time,20.0,Inventory Management Backend,Beginner,2025-12-30,India
+1077,Suresh Iyer,UI/UX,Senior,30.0,E-learning Platform Wireframes,Intermediate,2025-12-31,India
+1078,Amit Patel,AI,Full Time,10.0,Speech Recognition System,Senior,2026-01-01,India
+1079,Divya Sharma,Python Developer,Senior,10.0,Student Record Management System,Senior,2026-01-02,India
+1080,Divya Iyer,Python Developer,Senior,20.0,Student Record Management System,Beginner,2026-01-03,India
+1081,Arjun Sharma,FSD,Intern,10.0,Real-time Chat Application,Beginner,2026-01-04,India
+1082,Isha Mehta,AI,Intern,30.0,AI-driven Stock Price Prediction,Beginner,2026-01-05,India
+1083,Isha Patel,Backend Developer,Intern,30.0,Payment Gateway Integration System,Senior,2026-01-06,India
+1084,Nikhil Singh,Backend Developer,Full Time,10.0,Scalable REST API Development,Intermediate,2026-01-07,India
+1085,Vikas Verma,Backend Developer,Intern,20.0,Microservices-based E-commerce Backend,Senior,2026-01-08,India
+1086,Divya Nair,Python Developer,Senior,10.0,Student Record Management System,Intermediate,2026-01-09,India
+1087,Riya Das,UI/UX,Full Time,20.0,Responsive Portfolio Website,Intermediate,2026-01-10,India
+1088,Riya Mehta,FSD,Intern,30.0,Hotel Booking Platform,Intermediate,2026-01-11,India
+1089,Pooja Patel,Backend Developer,Intern,10.0,Microservices-based E-commerce Backend,Senior,2026-01-12,India
+1090,Vikas Verma,Python Developer,Full Time,20.0,Student Record Management System,Beginner,2026-01-13,India
+1091,Sneha Verma,AI,Intern,30.0,Fraud Detection using Machine Learning,Intermediate,2026-01-14,India
+1092,Neha Verma,AI,Intern,30.0,Fraud Detection using Machine Learning,Senior,2026-01-15,India
+1093,Manish Singh,AI,Intern,30.0,Fraud Detection using Machine Learning,Beginner,2026-01-16,India
+1094,Akash Singh,Backend Developer,Full Time,30.0,Inventory Management Backend,Beginner,2026-01-17,India
+1095,Sneha Iyer,UI/UX,Full Time,10.0,Responsive Portfolio Website,Intermediate,2026-01-18,India
+1096,Divya Nair,Python Developer,Full Time,40.0,AI-powered Resume Parser,Senior,2026-01-19,India
+1097,Anjali Iyer,UI/UX,Intern,30.0,Healthcare App UX Research,Intermediate,2026-01-20,India
+1098,Priya Iyer,Backend Developer,Senior,20.0,Inventory Management Backend,Intermediate,2026-01-21,India
+1099,Anjali Sharma,Python Developer,Senior,30.0,Python-based File Management System,Beginner,2026-01-22,India
+1100,Akash Verma,Backend Developer,Intern,24.0981241,Real-time Order Processing System,Intermediate,2026-01-23,India

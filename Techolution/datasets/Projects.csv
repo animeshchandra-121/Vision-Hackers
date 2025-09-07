@@ -1,0 +1,15 @@
+ID,Project_Title,Domain,Eligibility,Duration,Proficiency,Conflicts,Hard_Deadline,Experience_years
+PROJ_001,Machine Learning Model for Fraud Detection,AI,Python Programming,3 months,High,Data quality issues and missing values,2025-12-15,2
+PROJ_002,Full Stack E-Commerce Web App,FSD,"HTML, CSS, JS, React",4 months,High,Payment gateway integration issues,2025-11-30,1
+PROJ_003,Backend API for Social Media Analytics,Backend Developer,"Node.js, MongoDB",2 months,Mid,API rate limiting problems,2025-10-10,1
+PROJ_004,AI Chatbot for Customer Support,AI,"Python, NLP",2 months,High,Ambiguous user queries,2025-09-28,0
+PROJ_005,Portfolio Website with Modern UI,UI/UX,"Figma, HTML, CSS",1 month,Low,Browser compatibility issues,2025-09-20,0
+PROJ_006,Recommender System for Movie Platform,AI,"Python, ML",3 months,High,Cold start problem,2025-12-05,2
+PROJ_007,Learning Management System (LMS),FSD,MERN Stack,5 months,High,Scaling database with large users,2026-01-15,2
+PROJ_008,Cloud-Based Inventory Backend,Backend Developer,"Django/Flask, SQL",3 months,Mid,Data sync conflicts,2025-11-01,1
+PROJ_009,AI-Powered Resume Screening Tool,AI,"Python, ML",2 months,High,Biased model predictions,2025-10-25,1
+PROJ_010,UI Redesign for Travel App,UI/UX,UI/UX Design Tools,6 weeks,Mid,Client feedback delays,2025-09-18,0
+PROJ_011,REST API for Healthcare Records,Backend Developer,"Spring Boot, MySQL",4 months,High,Data privacy concerns,2026-02-01,2
+PROJ_012,Food Delivery App with Real-Time Tracking,FSD,"React Native, Firebase",4 months,High,GPS accuracy issues,2025-12-20,2
+PROJ_013,AI Sentiment Analysis Dashboard,AI,"Python, Data Analysis",2 months,Mid,Handling sarcasm in text,2025-11-10,1
+PROJ_014,Backend Microservices for Banking,Backend Developer,"Java, Kafka, SQL",5 months,High,Transaction rollback conflicts,2026-01-30,2

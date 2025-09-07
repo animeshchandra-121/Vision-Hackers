@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype - AI Talent Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-brain"></i>
+            <span>AI Talent Manager</span>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/prototype" class="active">Prototype</a>
+        </div>
+    </nav>
+
+    <div class="prototype-container">
+        <div class="container">
+            <div class="prototype-header">
+                <h1>AI Talent Management Prototype</h1>
+                <p>Upload your datasets and experience intelligent resource allocation</p>
+            </div>
+
+            <div class="upload-section">
+                <div class="upload-card">
+                    <div class="upload-header">
+                        <h2><i class="fas fa-upload"></i> Upload Datasets</h2>
+                        <p>Upload your employee and project data in CSV format</p>
+                    </div>
+                    
+                    <div class="upload-forms">
+                        <div class="upload-form">
+                            <h3>Employees Dataset</h3>
+                            <div class="file-upload-area" id="employees-upload">
+                                <i class="fas fa-file-csv"></i>
+                                <p>Drag & drop your employees CSV file here</p>
+                                <p>or <span class="browse-link">browse files</span></p>
+                                <input type="file" id="employees-file" accept=".csv" style="display: none;">
+                            </div>
+                            <div class="file-info" id="employees-info" style="display: none;">
+                                <i class="fas fa-check-circle"></i>
+                                <span id="employees-filename"></span>
+                                <button class="remove-file" onclick="removeFile('employees')">×</button>
+                            </div>
+                        </div>
+
+                        <div class="upload-form">
+                            <h3>Projects Dataset</h3>
+                            <div class="file-upload-area" id="projects-upload">
+                                <i class="fas fa-file-csv"></i>
+                                <p>Drag & drop your projects CSV file here</p>
+                                <p>or <span class="browse-link">browse files</span></p>
+                                <input type="file" id="projects-file" accept=".csv" style="display: none;">
+                            </div>
+                            <div class="file-info" id="projects-info" style="display: none;">
+                                <i class="fas fa-check-circle"></i>
+                                <span id="projects-filename"></span>
+                                <button class="remove-file" onclick="removeFile('projects')">×</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="upload-actions">
+                        <button class="upload-btn" id="upload-btn" onclick="uploadFiles()" disabled>
+                            <i class="fas fa-upload"></i>
+                            Upload Files
+                        </button>
+                        <button class="match-btn" id="match-btn" onclick="performMatching()" disabled>
+                            <i class="fas fa-magic"></i>
+                            MATCH
+                        </button>
+                    </div>
+                </div>
+
+                <div class="data-preview">
+                    <h3>Data Preview</h3>
+                    <div class="preview-tabs">
+                        <button class="tab-btn active" onclick="showPreview('employees')">Employees</button>
+                        <button class="tab-btn" onclick="showPreview('projects')">Projects</button>
+                    </div>
+                    <div class="preview-content">
+                        <div id="employees-preview" class="preview-table">
+                            <p>No data loaded. Upload a file to see preview.</p>
+                        </div>
+                        <div id="projects-preview" class="preview-table" style="display: none;">
+                            <p>No data loaded. Upload a file to see preview.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-section">
+                <div class="status-card">
+                    <h3>System Status</h3>
+                    <div class="status-items">
+                        <div class="status-item">
+                            <i class="fas fa-database"></i>
+                            <span>Data Loaded:</span>
+                            <span id="data-status">No data</span>
+                        </div>
+                        <div class="status-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>AI Engine:</span>
+                            <span id="ai-status">Ready</span>
+                        </div>
+                        <div class="status-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Matching:</span>
+                            <span id="matching-status">Not started</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading-overlay" id="loading-overlay" style="display: none;">
+                <div class="loading-content">
+                    <div class="spinner"></div>
+                    <h3 id="loading-text">Processing...</h3>
+                    <p id="loading-subtext">Please wait while we analyze your data</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/prototype.js') }}"></script>
+</body>
+</html>
